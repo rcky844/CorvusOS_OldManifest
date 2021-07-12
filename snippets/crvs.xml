@@ -9,16 +9,15 @@
            fetch="https://gitlab.com/" />
 		
 <remote name="rex"
-        fetch="https://github.com/Corvus-OS/"
-        revision="refs/heads/10" />
+        fetch="https://github.com/Corvus-Q/" />
 
-  <project path="art" name="android_art" remote="rex" />
-  <project path="bionic" name="android_bionic" remote="rex" />
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="rex" />
-  <project path="platform_testing" name="android_platform_testing" remote="rex" />
+  <project path="art" name="android_art" remote="rex" revision="590690c84024a23d939143c059e144f80216dca4" />
+  <project path="bionic" name="android_bionic" remote="rex" revision="ff38784aa40af5109259d971805b2adce38a9ce9" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="rex" revision="be159ebf7411a5d3d3e4c4e356195e7292427a97" />
+  <project path="platform_testing" name="android_platform_testing" remote="rex" revision="ff7dbfc4555010517c2497262731311b88dc84b5" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" remote="rex" >
+  <project path="build/make" name="android_build" remote="rex" revision="477b65d78042450866d643607201299288b132c9" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -28,88 +27,88 @@
     <linkfile src="tools" dest="build/tools"/>
   </project>
 
-  <project path="build/blueprint" name="android_build_blueprint" remote="rex" />
-  <project path="build/soong" name="android_build_soong" remote="rex" >
+  <project path="build/blueprint" name="android_build_blueprint" remote="rex" revision="4fae55136ca4d6eedd85064685f1a930559c1ccd" />
+  <project path="build/soong" name="android_build_soong" remote="rex" revision="7b39109167ff31f143a1e2ef703821c9c57c3563" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- External -->
-  <project path="external/tinycompress" name="android_external_tinycompress" remote="rex" />
-  <project path="external/selinux" name="android_external_selinux" remote="rex" />
-  <project path="external/skia" name="android_external_skia" remote="rex" />
-  <project path="external/sqlite" name="android_external_sqlite" remote="rex" />
-  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="rex" />
-  <project path="external/libjpeg-turbo" name="android_external_libjpeg-turbo" remote="rex" />
-  <project path="external/zlib" name="android_external_zlib" remote="rex" />
-  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="rex" />
+  <project path="external/tinycompress" name="android_external_tinycompress" remote="rex" revision="34e43f4fc8c55662c29fbbfeee39b5d75c28324a" />
+  <project path="external/selinux" name="android_external_selinux" remote="rex" revision="f419810108b804cd33c9c2eb0ba3dbb25705b9a4" />
+  <project path="external/skia" name="android_external_skia" remote="rex" revision="5b5ded42f99ab209ebbbab6a170759d61283c461" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="rex" revision="8a2efe384d93017b367c52fcadee03f30fb44142" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="rex" revision="2002f04dd42ff8e643acae1396b13390bf6fa1dd" />
+  <project path="external/libjpeg-turbo" name="android_external_libjpeg-turbo" remote="rex" revision="3f5a61dc4554396feca6b0a058a5b385e71d6f58" />
+  <project path="external/zlib" name="android_external_zlib" remote="rex" revision="44c48b726029b34bda7a766e90b8a926112f24d2" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="rex" revision="24c2b090dc12f930bf25616245c0b9c85c27a20f" />
 
   <!-- Frameworks -->
-  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="rex" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="rex" />
-  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="rex" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="rex" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="rex" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="rex" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="rex" revision="1a09d5bc572be7a5a6ef42e41e6ba5a606e369d2" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="rex" revision="667f0e5ade0f26fb9aef69a4dbfced3f742df992" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="rex" revision="34963282ca92016e24b20214cb97055a700e2bde" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="rex" revision="219d3fde04cc825579fa7309d841d68f9a3d2b9c" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="rex" revision="e9e18ddab81778106e5785a8821583ec2d03a3e4" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="rex" revision="af3025062757eed51b812ac159d03c470a902e80" />
 
   <!-- Device -->
-  <project path="device/du/sepolicy" name="device_du_sepolicy" remote="rex" />
-  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="rex" revision="10-legacy"/>
-  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="rex" />
+  <project path="device/du/sepolicy" name="android_device_corvus_sepolicy" remote="rex" revision="bcd9e42aa8ab818921a3b64e4828c99c6b92b390" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="rex" revision="5ef0b45eca6f1571ab0aae7921ea0a34d93d64da" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="rex" revision="f499789de537c545a69e70203130d12b2a35bfd5" />
 
   <!-- Hardware -->
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="rex" />
-  <project path="hardware/du/interfaces" name="android_hardware_du_interfaces" remote="rex" />
-  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="rex" />
-  <project path="hardware/ril" name="android_hardware_ril" remote="rex" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="rex" />
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="rex" />
-  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="rex" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="rex" revision="da43a40640eb53679bdd4924c55735994efdc8e9" />
+  <project path="hardware/du/interfaces" name="android_hardware_corvus_interfaces" remote="rex" revision="fc1bf35ee2c271d90236d33719471b50c70c4727" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="rex" revision="9c813dc0c21c8ca4a8f32b11a3900f5a735facb8" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="rex" revision="28b5de5cbc54adac995e2230304690ee38ba1b99" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="rex" revision="2e6a59a24e2821c8853e42eacf1e66e866e2f94e" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="rex" revision="eb8549d24e3efe46d1727a1b6788140134ab1dd3" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="rex" revision="de3ea8d3e61e071eff5e6484446539f3795caa8a" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" remote="rex" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="rex" />
-  <project path="system/vold" name="android_system_vold" remote="rex" />
-  <project path="system/extras" name="android_system_extras" remote="rex" />
-  <project path="system/bt" name="android_system_bt" remote="rex" />
-  <project path="system/netd" name="android_system_netd" remote="rex" />
-  <project path="system/keymaster" name="android_system_keymaster" remote="rex" />
+  <project path="system/core" name="android_system_core" remote="rex" revision="12c13b08e2b78a7f9adecd8e865b38ca7490f34e" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="rex" revision="7d1f7de0f5e5db424fbe023be844f8bc92a2dfec" />
+  <project path="system/vold" name="android_system_vold" remote="rex" revision="40a3b7efab9fa1f80b16c69fe253ab1fa0d5cd86" />
+  <project path="system/extras" name="android_system_extras" remote="rex" revision="f2f3a8013c307adf0f6933e58b2113f8e60c607d" />
+  <project path="system/bt" name="android_system_bt" remote="rex" revision="0cebcc84213f4419f68830ccc1350bfcecab30a9" />
+  <project path="system/netd" name="android_system_netd" remote="rex" revision="11fcf7c86e0b9e471f35fc94564bebc45ea40aae" />
+  <project path="system/keymaster" name="android_system_keymaster" remote="rex" revision="dbbcc315be6d97714cdc3e3f4bd608c036988448" />
 
   <!-- Prebuilts -->
-  <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="rex" />
-  <project path="prebuilts/r8" name="android_prebuilts_r8" remote="rex"  clone-depth="1" />
-  <project path="prebuilts/build-tools" name="DirtyUnicorns/android_prebuilts_build-tools" remote="gh" revision="q10x" />
+  <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="rex" revision="65f848435837cb840dc4ecbe513c81bb89197ea3" />
+  <project path="prebuilts/r8" name="android_prebuilts_r8" remote="rex"  clone-depth="1" revision="efb78cc518ee1e5ea3c2f701c38f6d8e6b68f06d" />
+  <project path="prebuilts/build-tools" name="DirtyUnicorns/android_prebuilts_build-tools" remote="gh" revision="52d5f133a3ae3159404de17c3ee87fe99bec55f2" />
 
   <!-- Packages -->
-  <project path="packages/apps/CertInstaller" name="android_packages_apps_CertInstaller" remote="rex" />
-  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="rex" />
-  <project path="packages/apps/CustomDoze" name="android_packages_apps_CustomDoze" remote="rex" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="rex" />
-  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="rex" />
-  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="rex" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="rex" />
-  <project path="packages/apps/DU-Tweaks" name="android_packages_apps_DU-Tweaks" remote="rex" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="rex" />
-  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="rex" />
-  <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="rex" />
-  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="rex" />
-  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="rex" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="rex" />
-  <project path="packages/apps/Traceur" name="DirtyUnicorns/android_packages_apps_Traceur" remote="gh" revision="q10x" />
-  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="rex" />
-  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="rex" />
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="rex" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="rex" />
-  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="rex" />
-  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="rex" />
-  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="rex" />
-  <project path="packages/apps/DU-Themes" name="android_packages_apps_DU-Themes" remote="rex" />
-  <project path="packages/apps/Recorder" name="android_packages_apps_Recorder" remote="rex" />
-  <project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="rex" />
+  <project path="packages/apps/CertInstaller" name="android_packages_apps_CertInstaller" remote="rex" revision="962b60e6f052766382495d055f5257be88f897f5" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="rex" revision="7ffc919c3ddf2e30e80fbd8399df710fcd37b7a8" />
+  <project path="packages/apps/CustomDoze" name="android_packages_apps_CustomDoze" remote="rex" revision="723414213031a9656f9401af93f9395f59c59907" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="rex" revision="41606094d4330d2e79177b3a09dacb5390421eac" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="rex" revision="4f48ac00f2568d4e4da71aeb469196e4b008acbf" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="rex" revision="54fe7011b97b2b25494f71f3edba5ab52b345868" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="rex" revision="60a0bb2b6579e6e0cd370ed85987c7b19a163660" />
+  <project path="packages/apps/DU-Tweaks" name="android_packages_apps_RavenLair" remote="rex" revision="db88304b1253a533892b887c2220ec81978bc8e6" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="rex" revision="801fbf166a402e216437dccb629636602df7b72f" />
+  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="rex" revision="05dc49be5728c8339ea611b789e80964e6272d5a" />
+  <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="rex" revision="2aa30cb587f597eb8837fbf03b241f1f06125c57" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="rex" revision="c3de3cc98c7af189dd1b95537fcb6e79365c4729" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="rex" revision="9febcb66fe18a708dda09a9fd0a883f7bb49ac6d" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="rex" revision="6f6a05cbb1d855e64ff1ae64d10759fec988e030" />
+  <project path="packages/apps/Traceur" name="DirtyUnicorns/android_packages_apps_Traceur" remote="gh" revision="7f390c6f99a258ab7b928c3ab27de8055466a5a8" />
+  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="rex" revision="c5e7b38cfb5bd31d81c92546febbc63ff04729d7" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="rex" revision="eb04ff1afe76d321dc888942adbf47a528185900" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="rex" revision="bfd5545410d05c098f3430758dbbe115acdf851b" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="rex" revision="9a606d9cb08db69db15d95bc0b742396ca0b4799" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="rex" revision="d4cf203ad8c3a1940ededf042c5222be3eba4f07" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="rex" revision="9ae427299d655885ff8d39152e704eb22690f6b4" />
+  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="rex" revision="26dcb7799bb93d21a3685f3f95096c9d6e022d18" />
+  <project path="packages/apps/DU-Themes" name="android_packages_apps_DU-Themes" remote="rex" revision="e0b358c184b34e2530d256b67ce4dcbc26f1bdc9" />
+  <project path="packages/apps/Recorder" name="android_packages_apps_Recorder" remote="rex" revision="8392b96f4eef0b92d2b00349dc7afaf2b8fdc1bd" />
+  <project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="rex" revision="ea2dcc833be54e6d12ef2d15b5980884e729bbc2" />
 
   <!-- Vendor -->
-  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="rex" />
-  <project path="vendor/themes" name="android_vendor_themes" remote="rex" />
-  <project path="vendor/du" name="android_vendor_du" remote="rex" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="rex" revision="c120e193cf9cd2b07e59b7de1a0fea7c532151d5" />
+  <project path="vendor/themes" name="android_vendor_themes" remote="rex" revision="cfff95407adbbea8eae21cfdddb0069336a54cc2" />
+  <project path="vendor/du" name="vendor_corvus" remote="rex" revision="08e4de25d392a3fc0b7e19ba8641b5474bfae09d" />
 
 </manifest>

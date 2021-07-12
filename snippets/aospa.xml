@@ -2,13 +2,12 @@
 <manifest>
 
   <remote  name="aospa"
-           fetch="https://github.com/AOSPA"
-           revision="quartz" />
+           fetch="https://github.com/AOSPA" />
 
-  <project path="libcore" name="android_libcore" remote="aospa" />
-  <project path="prebuilts/abi-dumps/ndk" name="android_prebuilts_abi-dumps_ndk" remote="aospa" clone-depth="1" />
-  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="aospa" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-elf" remote="aospa" revision="master" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi" name="android_prebuilts_gcc_linux-x86_arm_arm-eabi" remote="aospa" revision="master" clone-depth="1" />
+  <project path="libcore" name="android_libcore" remote="aospa" revision="652167fd488fd3da223a1ff36c4d8aab714ada3a" />
+  <project path="prebuilts/abi-dumps/ndk" name="android_prebuilts_abi-dumps_ndk" remote="aospa" clone-depth="1" revision="e6a799ccc6ecdd6bb683ce91ce2d0d21c08d677d" />
+  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="aospa" clone-depth="1" revision="ec165315bf32a250907871760af8eeca7a10f7e1" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-elf" remote="aospa" revision="cd9eb72bace3b4d682d5251a9eb4829bdd0ec2ca" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi" name="android_prebuilts_gcc_linux-x86_arm_arm-eabi" remote="aospa" revision="b788b457799d68553f51a00a5dd4a1d0ea6b0558" clone-depth="1" />
 
 </manifest>
